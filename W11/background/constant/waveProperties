@@ -1,7 +1,7 @@
-/*--------------------------------*- C++ -*----------------------------------*\
+/*---------------------------------------------------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  plus                                  |
+|  \\    /   O peration     | Version:  v1812                                 |
 |   \\  /    A nd           | Web:      www.OpenFOAM.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -10,29 +10,38 @@ FoamFile
     version     2.0;
     format      ascii;
     class       dictionary;
-    location    "system";
-    object      setFieldsDict;
+    location    "constant";
+    object      waveProperties;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-defaultFieldValues
-(
-    volScalarFieldValue alpha.water 0
-	
-);
+inlet
+{
+    alpha           alpha.water;
 
-regions
-(
-    boxToCell
-    {
-        box (-100 -100 -100) (100 100 0);
-        fieldValues ( volScalarFieldValue alpha.water 1 );
-    }
-	
-	
+    waveModel       StokesII;
 
+    nPaddle         2;
 
-);
+    waveHeight      0.043;
+
+    waveAngle       0.0;
+
+    rampTime        2.0;
+
+    activeAbsorption yes;
+
+    wavePeriod      1.0;
+}
+
+outlet
+{
+    alpha           alpha.water;
+
+    waveModel       shallowWaterAbsorption;
+
+    nPaddle         2;
+}
 
 
 // ************************************************************************* //
