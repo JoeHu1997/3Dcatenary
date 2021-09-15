@@ -1,0 +1,24 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2006                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : _b45f8f6f58-20200629 OPENFOAM=2006
+Arch   : "LSB;label=64;scalar=64"
+Exec   : reconstructPar
+Date   : Aug 25 2021
+Time   : 12:51:36
+Host   : master
+PID    : 31212
+I/O    : uncollated
+Case   : /home/ylchen/OpenFOAM/ylchen-v1906/run/3D_cylinder/3Dcylinder_C15/background
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
